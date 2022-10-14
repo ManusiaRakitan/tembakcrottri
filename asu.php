@@ -48,7 +48,8 @@ if (strpos(json_encode($login), '"status":true')) {
     echo @color('green', "$poin Poin\n\n\n");
     cek:
     echo @color('red', "PILIH PAKET NYA YGY:\n\n\n\n");
-    echo @color('nevy', "╭✠╼━━━━━━❖━━━━━━━✠╮[1] Reward 5GB 1hari Harga\t: Rp 1\n[2] 25GB 30hari Harga\t\t: Rp 25000\n[3] 55GB 30 Hari Harga\t\t: Rp 50000\n[4] 65GB 30 Hari Harga\t\t: Rp 60000\n[5] 75GB 30 Hari Harga\t\t: Rp 75000\n[6] 90GB 30 Hari Harga\t\t: Rp 90000\n[7] 100GB 30 Hari Harga\t\t: Rp 90000\n\n\n\n╰✠╼━━━━━━❖━━━━━━━✠╯");
+    echo @color('nevy', "╭✠╼━━━━━━❖━━━━━━━✠╮
+[1] Reward 5GB 1hari Harga\t: Rp 1\n[2] 25GB 30hari Harga\t\t: Rp 25000\n[3] 55GB 30 Hari Harga\t\t: Rp 50000\n[4] 65GB 30 Hari Harga\t\t: Rp 60000\n[5] 75GB 30 Hari Harga\t\t: Rp 75000\n[6] 90GB 30 Hari Harga\t\t: Rp 90000\n[7] 100GB 30 Hari Harga\t\t: Rp 90000\n\n\n\n╰✠╼━━━━━━❖━━━━━━━✠╯");
     echo @color('green', "PICIK ANGKANYA NA SESUAI PAKET: ");
     $pilih = trim(fgets(STDIN));
     switch ($pilih) {
