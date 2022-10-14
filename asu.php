@@ -1,7 +1,7 @@
 <?php
 
 
-echo @color("yellow","                   
+echo @color("green","                   
 ╔════╗╔╗─╔╗╔═══╗╔═══╗╔═══╗
 ║╔╗╔╗║║║─║║║╔═╗║║╔══╝║╔══╝
 ╚╝║║╚╝║╚═╝║║╚═╝║║╚══╗║╚══╗
@@ -15,17 +15,17 @@ echo @color("yellow","
 ──║║──║╚══╗║║║║║║║║───║╚══╗║║║╚╗
 ──╚╝──╚═══╝╚╝╚╝╚╝╚╝───╚═══╝╚╝╚═╝
 \t╔════•ೋೋ•════╗ 
-          by-fhmynwa
+          by-414 SecondFamily
 \t╚════•ೋೋ•════╝
-OJOK LALI ISI PULSA SEK DHEK\n
+SEDIAKAN PULSA DULU YGY BUAT BELI PAKETAN NYA \n
 SC GRATIS!!!!! \n\n");
 echo @color('red',"Note: Jika status sukses tetapi pulsa tidak terpotong brati gangguan ya! \n\n");
 
-echo @color('green', "\tNOMERMU COK (089xxxxnx.com)\n\t: ");
+echo @color('red', "\tNOMER PIAN SANAK (089xxxxnx.com)\n\t: ");
 $nomor = trim(fgets(STDIN));
 $login = login($nomor);
 echo @color('yellow', $login['message']."\n");
-echo @color('green', "\tOTP BOS\n\t: ");
+echo @color('red', "\tOTP BOS\n\t: ");
 $otp = trim(fgets(STDIN));
 $login = otplogin($nomor,$otp);
 if (strpos(json_encode($login), '"status":true')) {
@@ -38,18 +38,18 @@ if (strpos(json_encode($login), '"status":true')) {
     $sisakuota = $profil['sumOfInternet'];
     $poin = $profil['stotalPoin'];
 
-	echo @color('blue', "\tPULSAMU SAYANG\n\t: ");
+	echo @color('blue', "\tPULSA PIAN SONOK\n\t: ");
 	echo @color('green', "$balance\n");
-	echo @color('blue', "\tMASA AKTIFMU DEK\n\t: ");
+	echo @color('blue', "\tMASA AKTIFMU PIAN\n\t: ");
 	echo @color('green', "$aktif\n");
-    echo @color('blue', "\tPAKETAN MU\n\t: ");
+    echo @color('blue', "\tPAKETAN PIAN\n\t: ");
     echo @color('green', "$sisakuota\n");
-    echo @color('blue', "\tPOINMU SAYANG\n\t: ");
+    echo @color('blue', "\tPOIN PIAN\n\t: ");
     echo @color('green', "$poin Poin\n\n\n");
     cek:
-    echo @color('red', "ENDANG PILIH SAYANG:\n\n\n\n");
-    echo @color('nevy', "[1] Reward 5GB 1hari Harga\t: Rp 1\n[2] 25GB 30hari Harga\t\t: Rp 25000\n[3] 55GB 30 Hari Harga\t\t: Rp 50000\n[4] 65GB 30 Hari Harga\t\t: Rp 60000\n[5] 75GB 30 Hari Harga\t\t: Rp 75000\n[6] 90GB 30 Hari Harga\t\t: Rp 90000\n[7] 100GB 30 Hari Harga\t\t: Rp 90000\n\n\n\n");
-    echo @color('green', "SING ENDI BOS: ");
+    echo @color('red', "PILIH PAKET NYA YGY:\n\n\n\n");
+    echo @color('nevy', "╭✠╼━━━━━━❖━━━━━━━✠╮[1] Reward 5GB 1hari Harga\t: Rp 1\n[2] 25GB 30hari Harga\t\t: Rp 25000\n[3] 55GB 30 Hari Harga\t\t: Rp 50000\n[4] 65GB 30 Hari Harga\t\t: Rp 60000\n[5] 75GB 30 Hari Harga\t\t: Rp 75000\n[6] 90GB 30 Hari Harga\t\t: Rp 90000\n[7] 100GB 30 Hari Harga\t\t: Rp 90000\n\n\n\n╰✠╼━━━━━━❖━━━━━━━✠╯");
+    echo @color('green', "PICIK ANGKANYA NA SESUAI PAKET: ");
     $pilih = trim(fgets(STDIN));
     switch ($pilih) {
             case '1':
@@ -96,9 +96,9 @@ if (strpos(json_encode($login), '"status":true')) {
     }
     $beli = beli($nomor,$plan,$secret,$prodid);
     if ($beli['status'] == true) {
-        echo @color('green', "SUKSES SAYANG\n");
+        echo @color('green', "SUKSES JER PEMBAKAL\n");
     } else {
-        echo @color('red', "GAGAL DHEK ...!!! \n");
+        echo @color('red', "ANDA BELUM BERUNTUNG ...!!! \n");
     }
 
 
